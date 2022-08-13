@@ -50,7 +50,7 @@ export const Post = ({
                 <div className={styles.editButtons}>
                     <Link to={`/posts/${id}/edit`}>
                         <IconButton color="primary">
-                            <EditIcon />1
+                            <EditIcon />
                         </IconButton>
                     </Link>
 
@@ -63,7 +63,8 @@ export const Post = ({
             {imageUrl && (
                 <img
                     className={clsx(styles.image, { [styles.imageFull]: isFullPost })}
-                    src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+                    // src={`${process.env.REACT_APP_API_URL}${imageUrl}`}
+                    src={`https://blog-back-mern.herokuapp.com${imageUrl}`}
                     alt={title}
                 />
             )}
