@@ -3,26 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Grid from '@mui/material/Grid';
-
-import axios from "../axios";
-
-import { Post } from '../components/Post';
-import { TagsBlock } from '../components/TagsBlock';
-import { CommentsBlock } from '../components/CommentsBlock';
 import { fetchPosts, fetchTags } from "../redux/slices/posts";
+import { Post } from '../components/Post';
+
+// import axios from "../axios";
+// import { TagsBlock } from '../components/TagsBlock';
+// import { CommentsBlock } from '../components/CommentsBlock';
 
 export const Home = () => {
     const dispatch = useDispatch()
-    const { posts, tags } = useSelector(state => state.posts)
+    const { posts } = useSelector(state => state.posts) //tags
     const userData = useSelector(state => state.auth.data)
 
     const isPostsLoading = posts.status === 'loading'
-    const isTagsLoading = tags.status === 'loading'
+    // const isTagsLoading = tags.status === 'loading'
 
     useEffect(() => {
         dispatch(fetchPosts())
         dispatch(fetchTags())
-    }, [])
+    }, [dispatch])
 
     return (
         <>

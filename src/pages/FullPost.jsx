@@ -21,7 +21,7 @@ export const FullPost = () => {
             .catch((err) => {
                 console.warn(err)
             })
-    }, [])
+    }, [id])
 
     if (loading) {
         return <Post isLoading={loading} isFullPost/>

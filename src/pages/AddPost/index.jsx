@@ -17,7 +17,7 @@ export const AddPost = () => {
     const { id } = useParams()
 
     const navigate = useNavigate()
-    const [isLoading, setIsLoading] = useState(false);
+    const [setIsLoading] = useState(false); //isLoading
     const [text, setText] = useState('');
     const [title, setTitle] = useState('');
     const [tags, setTags] = useState('');
@@ -84,7 +84,7 @@ export const AddPost = () => {
         } else  {
 
         }
-    } ,[])
+    } ,[id])
 
     const options = useMemo(
         () => ({

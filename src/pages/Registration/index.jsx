@@ -8,7 +8,7 @@ import Avatar from '@mui/material/Avatar';
 import styles from './Login.module.scss';
 import {useForm} from "react-hook-form";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchLogin, fetchRegistration, selectIsAuth} from "../../redux/slices/auth";
+import { fetchRegistration, selectIsAuth} from "../../redux/slices/auth";
 import {Navigate} from "react-router-dom";
 
 export const Registration = () => {
@@ -18,7 +18,6 @@ export const Registration = () => {
     const {
         register,
         handleSubmit,
-        // setError,
         formState: { errors, isValid}
     } = useForm({
         defaultValues: {
