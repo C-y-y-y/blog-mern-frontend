@@ -17,7 +17,7 @@ export const AddPost = () => {
     const { id } = useParams()
 
     const navigate = useNavigate()
-    const [setIsLoading] = useState(false); //isLoading
+    const [isLoading, setIsLoading] = useState(false); //isLoading
     const [text, setText] = useState('');
     const [title, setTitle] = useState('');
     const [tags, setTags] = useState('');
@@ -163,6 +163,7 @@ export const AddPost = () => {
                 value={text}
                 onChange={onTextChange}
                 options={options}
+                // id={id}
             />
 
             <div className={styles.buttons}>
