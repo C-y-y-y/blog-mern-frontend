@@ -40,6 +40,9 @@ export const Post = ({
         dispatch(fetchRemovePosts(id))
     };
 
+    console.log(process.env.REACT_APP_API_URL)
+    console.log(imageUrl)
+
 
     return (
         <div className={clsx(styles.root, { [styles.rootFull]: isFullPost })}>
