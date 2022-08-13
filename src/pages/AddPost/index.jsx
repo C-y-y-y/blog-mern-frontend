@@ -17,7 +17,7 @@ export const AddPost = () => {
     const { id } = useParams()
 
     const navigate = useNavigate()
-    const [isLoading, setIsLoading] = useState(false); //isLoading
+    // const [isLoading, setIsLoading] = useState(false); //isLoading
     const [text, setText] = useState('');
     const [title, setTitle] = useState('');
     const [tags, setTags] = useState('');
@@ -49,14 +49,13 @@ export const AddPost = () => {
 
     const onSubmit = async () => {
         try {
-            setIsLoading(true)
+            // setIsLoading(true)
             const fields = {
                 title,
                 imageUrl,
                 tags,
                 text
             }
-
 
             const { data } = idEditing
                 ? await axios.patch(`/posts/${id}`, fields)
