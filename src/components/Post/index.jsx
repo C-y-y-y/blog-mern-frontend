@@ -46,7 +46,7 @@ export const Post = ({
                 <div className={styles.editButtons}>
                     <Link to={`/posts/${id}/edit`}>
                         <IconButton color="primary">
-                            <EditIcon/> edit
+                            <EditIcon/>
                         </IconButton>
                     </Link>
 
