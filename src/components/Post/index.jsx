@@ -50,7 +50,7 @@ export const Post = ({
                 <div className={styles.editButtons}>
                     <Link to={`/posts/${id}/edit`}>
                         <IconButton color="primary">
-                            <EditIcon />
+                            <EditIcon />1
                         </IconButton>
                     </Link>
 
